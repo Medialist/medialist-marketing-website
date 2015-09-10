@@ -1,0 +1,45 @@
+// Variables
+// --------------------------------------------------
+
+// Colours
+$background-color: #1f3244;
+$heading-text-color: #1f3244;
+$base-text-color: #1f3244;
+
+$button-background-color: #4b76a0;
+$button-text-color: #fff;
+
+// Forms
+$form-border-visible: true;
+$form-border-radius: 3px;
+$form-border-width: 1px;
+$form-border-color: #C0C9D2;
+$form-border: $form-border-width solid $form-border-color;
+
+// Typography
+$base-font-family: "Gibson", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$icon-font-family: "Ionicons";
+
+$base-font-size: 1.25em;
+
+$base-line-height: 1.4;
+$heading-line-height: 1.2;
+
+// Breakpoints
+$xsmall: 18em; // 288px
+$small: 35em; // 560px
+$medium: 45em; // 720px
+$large: 60em; // 960px
+$xlarge: 75em; // 1200px
+
+$xs: $xsmall;
+$s: $small;
+$m: $medium;
+$l: $large;
+$xl: $xlarge;
+
+$mobile: $xsmall;
+$tablet: $medium;
+$desktop: $large;
+$wide: $xlarge;
+
