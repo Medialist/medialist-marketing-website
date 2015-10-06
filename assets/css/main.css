@@ -1,4 +1,4 @@
-/* 
+/*
 Holding Page Template
 Built by Sam Lester at Inktrap
 10th September 2015
@@ -379,7 +379,7 @@ body {
   font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   color: #1F3244;
   line-height: 1.4;
-  background-color: #2e3841;
+  background-color: #fff;
   -webkit-text-size-adjust: none;
   font-size: 1em; }
   @media only screen and (min-width: 45em) {
@@ -514,7 +514,6 @@ body {
   position: relative;
   z-index: 10;
   border-radius: 3px;
-  box-shadow: 0px 20px 20px 0px rgba(57, 69, 80, 0.7); }
   @media only screen and (min-width: 45em) {
     .box {
       padding: 3em; } }
