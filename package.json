@@ -1,0 +1,28 @@
+{
+  "name": "medialist-marketing-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html --out-dir docs",
+    "build": "parcel build src/index.html --out-dir docs --public-url ./",
+    "deploy": "ipfs add -r -q docs | tail -n1 >versions/current; cat versions/current >> versions/history; cat versions/current"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Medialist/medialist-marketing-website.git"
+  },
+  "author": "olizilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Medialist/medialist-marketing-website/issues"
+  },
+  "homepage": "https://github.com/Medialist/medialist-marketing-website#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.5.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "tachyons": "^4.9.1"
+  }
+}

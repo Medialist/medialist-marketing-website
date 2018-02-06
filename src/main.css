@@ -1,0 +1,134 @@
+@import "tachyons";
+@import "./fonts/hkgrotesk/HKGrotesk.css";
+
+.serif {
+  font-family: 'Minion Pro', georgia, serif;
+}
+
+.sans-serif {
+  font-family: 'HK Grotesk', -apple-system, BlinkMacSystemFont, 'avenir next', avenir,'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+}
+
+.system-sans-serif {
+  font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir,'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+}
+
+.navy {
+  color: #24364C;
+}
+.mid-gray {
+  color: #4F5E6F;
+}
+.blue {
+  color: #437AF4;
+}
+.bg-blue {
+  background-color: #437AF4;
+}
+
+
+.btn {
+  appearance: none;
+  font-family: 'HK Grotesk', -apple-system, BlinkMacSystemFont, 'avenir next', avenir,'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  padding: 6px 20px;
+  font-weight: 500;
+  color: white;
+  background-color: #437AF4;
+  border: 2px solid #3F71E0;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.10);
+}
+
+.btn-lg {
+  font-size: 17px;
+  padding: 8px 20px;
+}
+
+.btn-orange {
+  background: #FA862C;
+  border: 2px solid #E5731A;
+}
+
+.bubble-left {
+  border-radius: 8px 8px 8px 2px;
+}
+
+.bubble-right {
+  border-radius: 8px 8px 2px 8px;
+}
+
+.input {
+  appearance: none;
+  padding: 7px 10px;
+  font-family: 'HK Grotesk', -apple-system, BlinkMacSystemFont, 'avenir next', avenir,'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  background: #FFFFFF;
+  border: 1px solid #E3E8F0;
+  border-radius: 2px;
+  font-size: 17px;
+  line-height: 24px;
+  border-radius: 2px;
+  color: #24364C;
+  min-width: 232px;
+}
+.input-lg {
+  font-size: 17px;
+  line-height: 28px;
+}
+
+.input::placeholder {
+  color: #99A3B2;
+}
+
+.hr {
+  width: 100px;
+  border-top: solid 1px #354557;
+}
+
+.hr-light {
+  border-color:#E3E8F0;
+}
+
+.nav-link {
+  font-size: 15px;
+  padding: 6px 2px;
+  margin: 0 10px;
+  font-weight: 500;
+  color: #4F5E6F;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  box-shadow: inset 0 -2px 0px 0px #2B60D5;
+  color: #2B60D5;
+}
+
+.mw-lg {
+  margin: auto;
+  max-width: 1140px;
+}
+
+.bg-stroke {
+  position:relative;
+}
+.bg-stroke::before {
+  content: '';
+  display: block;
+  position:absolute;
+  background: url('img/highlight.png') no-repeat;
+  width: 245px;
+  height: 61px;
+  z-index: -1;
+  top: -7px;
+  left: -10px;
+}
+
+@media (min-width: 60rem) {
+  .bg-illustration-1 {
+    padding: 110px 0 150px;
+    background: url('img/illustration-1.png') no-repeat top right;
+    background-size: 50%;
+  }
+}
