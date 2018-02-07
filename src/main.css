@@ -51,10 +51,16 @@
 .hover-white:hover {
   color: #fff;
 }
+.hover-text-underline:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
 .fill-currentColor {
   fill: currentColor
 }
-
+.bg-gradient-1 {
+  background-image: linear-gradient(-180deg, rgba(227,232,240,0.00) 0%, #E3E8F0 100%);
+}
 
 .btn {
   appearance: none;
@@ -67,6 +73,7 @@
   background-color: #437AF4;
   border: 2px solid #3F71E0;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.10);
+  text-decoration: none;
 }
 
 .btn-lg {
