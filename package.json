@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html --out-dir docs",
+    "build:static": "rsync -a static/ docs/",
     "clean": "rm -rf docs/*",
-    "build": "parcel build src/index.html --out-dir docs --public-url ./",
+    "build": "run-p build:*",
+    "watch": "run-p watch:*",
+    "build:css": "postcss pages/main.css --output docs/bundle.css",
+    "watch:css": "postcss pages/main.css --output docs/bundle.css -w",
+    "build:html": "node build/html.js",
+    "watch:html": "nodemon -w pages -e js,jsx,json -x npm run build:html",
+    "watch:serve": "browser-sync start --files 'docs/bundle.*' --files 'docs/*.html' --server docs --port 4000 --reload-delay 100",
     "deploy": "ipfs add -r -q docs | tail -n1 >versions/current; cat versions/current >> versions/history; cat versions/current"
   },
   "repository": {
@@ -19,11 +25,23 @@
     "url": "https://github.com/Medialist/medialist-marketing-website/issues"
   },
   "homepage": "https://github.com/Medialist/medialist-marketing-website#readme",
-  "devDependencies": {
-    "parcel-bundler": "^1.5.1"
-  },
   "dependencies": {
     "autoprefixer": "^7.2.5",
-    "tachyons": "^4.9.1"
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "browser-sync": "^2.23.5",
+    "cssnano": "^3.10.0",
+    "nodemon": "^1.14.11",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^5.0.0",
+    "postcss-import": "^11.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "require-directory": "^2.1.1",
+    "standard": "^10.0.3",
+    "tachyons": "^4.9.1",
+    "urel": "^1.0.0"
   }
 }

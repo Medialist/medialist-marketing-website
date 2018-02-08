@@ -1,5 +1,31 @@
 @import "tachyons";
-@import "./fonts/hkgrotesk/HKGrotesk.css";
+
+@font-face {
+  font-family:'HK Grotesk';
+  src: local('HKGrotesk-Bold'), local(HK Grotesk Bold),
+  url('fonts/HK Grotesk Bold.woff2') format('woff2'),
+  url('fonts/HK Grotesk Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'HK Grotesk';
+  src: local('HKGrotesk-Regular'), local(HK Grotesk Regular),
+  url('fonts/HKGrotesk-Regular.woff2') format('woff2'),
+  url('fonts/HKGrotesk-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'HK Grotesk';
+  src: local('HKGrotesk-Italic'), local(HK Grotesk Italic),
+  url('fonts/HKGrotesk-Italic.woff2') format('woff2'),
+  url('fonts/HKGrotesk-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
 
 .nav-link {
   font-size: 15px;
@@ -20,6 +46,11 @@
 
 .system-sans-serif {
   font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir,'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+}
+
+body {
+  background:white;
+  font-family: 'HK Grotesk', -apple-system, BlinkMacSystemFont, 'avenir next', avenir,'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
 }
 
 .navy {
