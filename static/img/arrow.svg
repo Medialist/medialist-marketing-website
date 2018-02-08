@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Arrow / Down / Blue</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-/-Arrow-/-Down-/-Blue" fill="#2B60D5">
+            <path d="M7,5.94974747 L9.69238816,5.94974747 C9.96853053,5.94974747 10.1923882,6.17360509 10.1923882,6.44974747 C10.1923882,6.58235571 10.1397097,6.70953267 10.0459415,6.80330086 L5.94974747,10.8994949 L1.85355339,6.80330086 C1.65829124,6.60803871 1.65829124,6.29145622 1.85355339,6.09619408 C1.94732158,6.00242589 2.07449854,5.94974747 2.20710678,5.94974747 L5,5.94974747 L5,1.5 C5,1.22385763 5.22385763,1 5.5,1 L6.5,1 C6.77614237,1 7,1.22385763 7,1.5 L7,5.94974747 Z" id="Arrow"></path>
+        </g>
+    </g>
+</svg>

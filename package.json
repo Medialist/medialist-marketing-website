@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:static": "rsync -a static/ docs/",
+    "start": "run-p watch:*",
     "clean": "rm -rf docs/*",
     "build": "run-p build:*",
     "watch": "run-p watch:*",
@@ -12,7 +12,9 @@
     "watch:css": "postcss pages/main.css --output docs/bundle.css -w",
     "build:html": "node build/html.js",
     "watch:html": "nodemon -w pages -e js,jsx,json -x npm run build:html",
-    "watch:serve": "browser-sync start --files 'docs/bundle.*' --files 'docs/*.html' --server docs --port 4000 --reload-delay 100",
+    "build:static": "rsync -a static/ docs/",
+    "watch:static": "nodemon -w static -e jpg,png,svg,woff,woff2 -x npm run build",
+    "watch:serve": "browser-sync start --files 'docs/bundle.*' --files 'docs/*.html' --server docs --port 4000 --reload-delay 100 --no-notify",
     "deploy": "ipfs add -r -q docs | tail -n1 >versions/current; cat versions/current >> versions/history; cat versions/current"
   },
   "repository": {
