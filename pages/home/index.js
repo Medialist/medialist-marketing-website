@@ -23,7 +23,7 @@ const Home = ({relative, isActive}) => {
           </div>
         </div>
         <img className="db dn-l w-100 pt3" src={relative('/img/illustration-1.png')} />
-        <div className='pt6 tc'>
+        <div className='pt6 tc dn db-l'>
           <a className='dib pa2 blue link' href='#save-time'>
             Learn more below
             <img className='ml1 v-mid' src={relative('/img/arrow.svg')} />

@@ -102,7 +102,7 @@ const HowItWorks = ({relative, isActive}) => {
     <div>
       <Header relative={relative} isActive={isActive} />
       <section style={{background: `url(${relative('/img/how-it-works-bg.svg')}) no-repeat bottom left`}}>
-        <div className='center pt5 ph2 pb4 tc' style={{maxWidth: 610}}>
+        <div className='center pt5-l ph2 pb4 tc' style={{maxWidth: 610}}>
           <h1 className='f1 fw6 mb4 serif navy'>
             Here’s how Medialist works
           </h1>
