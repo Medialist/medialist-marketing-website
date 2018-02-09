@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="750px" height="288px" viewBox="0 0 750 288" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Background Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="80.4090512%" y1="50%" x2="-103.958551%" y2="199.025446%" id="linearGradient-1">
+            <stop stop-color="#E3E8F0" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#E3E8F0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="How-it-Works-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -234.000000)">
+        <g id="Hero" fill="url(#linearGradient-1)">
+            <path d="M398,275.820731 C597.162792,222.314654 760.162792,220.150941 887,269.329593 C887,402.148276 887,486.366638 887,521.984681 C763.5,521.931615 46.1829257,522.037747 0,521.984681 C98.0931764,418.994086 214,325.253249 398,275.820731 Z" id="Background-Shape"></path>
+        </g>
+    </g>
+</svg>
