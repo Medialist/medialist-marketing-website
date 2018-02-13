@@ -1,7 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Html = ({ title = '', description = '', relative, children }) => (
+const Html = ({
+  title = '',
+  description = 'Medialist is a simpler and easier way to create media lists, track outreach and manage all your influencer relationships from one place.',
+  relative,
+  children
+}) => (
   <html>
     <head>
       <meta charSet='UTF-8' />
@@ -13,6 +18,8 @@ const Html = ({ title = '', description = '', relative, children }) => (
     </head>
     <body>
       {children}
+      <script src={relative('bundle.js')} />
+      <script src={relative('intercom.js')} />
     </body>
   </html>
 )

@@ -1,4 +1,5 @@
 import React from 'react'
+import {EmailForm} from './EmailForm'
 
 const FooterLink = ({active, href, children}) => {
   return (
@@ -14,7 +15,7 @@ const Footer = ({relative, isActive}) => {
   return (
     <footer>
       <section className="bg-white bt b--light-gray">
-        <div className="mw-lg dt-l w-100 pt6 pb5 ph2">
+        <div className="mw-lg dt-l w-100 pt5 pb5 ph2">
           <div className="dtc-l w-50-l pr3-l pb3 pb0-l tc tl-l">
             <h1 className="f2 fw6 ma0 serif navy">
               Get started with Medialist
@@ -23,12 +24,13 @@ const Footer = ({relative, isActive}) => {
               A better way to manage influencer relationships and campaigns.
             </p>
           </div>
-          <div className="dtc-l w-50-l tr-l">
-            <form className="db w-100" action="https://post.tableflip.io/medialist.io">
+          <div className="dtc-l w-50-l tr-l v-mid">
+            <EmailForm relative={relative} />
+            {/* <form className="db w-100" action="https://post.tableflip.io/medialist.io">
               <input className="input input-lg db w-100 dib-ns w-70-ns" type="email" name="email" placeholder="Enter your email address" />
               <input type="hidden" name="g-recaptcha-response" defaultValue="skip" />
               <button className="btn btn-orange bubble-left btn-lg w-100 w-auto-ns db dib-ns mt3 mt0-ns ml2-ns" type="submit" name="button">Get a demo</button>
-            </form>
+            </form> */}
           </div>
         </div>
       </section>
