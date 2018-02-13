@@ -8,14 +8,14 @@ const Feedback = ({relative}) => (
     </div>
     <div className='pt2 pt1-ns o-0 submit-error-o-100 fw5 red absolute bottom-0 left-0' style={{fontSize: 14}}>
       <img className='mr1' src={relative('/img/email-error.svg')} />
-      <span>Sorry, there was an error. Please try again.</span>
+      <span>Sorry, there was an error.</span>
     </div>
   </div>
 )
 
 export const EmailForm = ({relative, large}) => {
   return (
-    <form data-id='email-form' className="db w-100" action="http://post.tableflip.io/medialist.io" method='post'>
+    <form data-id='email-form' className="db w-100" action="https://post.tableflip.io/medialist.io" method='post'>
       <div className='db w-100 dib-ns w-70-ns tl'>
         <input className="input input-lg db w-100 submit-error-b--red" type="email" name="email" placeholder="Enter your email address" />
         <Feedback relative={relative}/>
@@ -28,7 +28,7 @@ export const EmailForm = ({relative, large}) => {
 
 export const SmallEmailForm = ({relative, large}) => {
   return (
-    <form data-id='email-form' style={{width: '100%', maxWidth: 362}} action="http://post.tableflip.io/medialist.io" method='post'>
+    <form data-id='email-form' style={{width: '100%', maxWidth: 362}} action="https://post.tableflip.io/medialist.io" method='post'>
       <input type="hidden" name="g-recaptcha-response" defaultValue="skip" />
       <div className='dt w-100 dt--fixed'>
         <div className='dtc-ns v-mid'>
