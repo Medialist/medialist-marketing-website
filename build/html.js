@@ -12,6 +12,10 @@ const requireDirectory = require('require-directory')
 const Html = require('./Html.jsx').default
 const srcDir = path.resolve(__dirname, '../pages')
 const outputDir = path.resolve(__dirname, '../docs')
+const argv = require('minimist')(process.argv.slice(2))
+delete argv._
+
+console.log('Build html props', argv)
 
 function renderToHtml (srcPath, baseUrl) {
   const relative = (assetPath) => {
@@ -23,6 +27,7 @@ function renderToHtml (srcPath, baseUrl) {
     return relativeUrl(baseUrl, assetPath) === './'
   }
   const props = {
+    ...argv,
     relative,
     isActive
   }
