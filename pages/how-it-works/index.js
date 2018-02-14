@@ -27,7 +27,7 @@ const SectionTextLeft = ({className, imgSrc, iconSrc, title, text}) => {
   const paras = Array.isArray(text) ? text : [text]
   return (
     <section className={className}>
-      <div className='pv5 dt-l w-100 dt--fixed'>
+      <div className='pv5 dt-l w-100 dt--fixed mw-xl'>
         <div className='dtc-l w-50-l v-mid tr'>
           <div className='dib tl ph2 pb4' style={{maxWidth: 610}}>
             <h2 className='tc tl-ns f2 fw6 mb3 serif navy'>
@@ -54,7 +54,7 @@ const SectionTextRight = ({className, imgSrc, iconSrc, title, text}) => {
   const paras = Array.isArray(text) ? text : [text]
   return (
     <section className={className}>
-      <div className='pv5 dt-l w-100 dt--fixed'>
+      <div className='pv5 dt-l w-100 dt--fixed mw-xl'>
         <div className='dtc-l w-50-l v-mid'>
           <ScreenshotLeft src={imgSrc} />
         </div>

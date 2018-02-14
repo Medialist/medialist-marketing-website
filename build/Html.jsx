@@ -20,6 +20,7 @@ const Html = ({
       {children}
       <script src={relative('bundle.js')} />
       <script src={relative('intercom.js')} />
+      <script id="hs-script-loader" async defer src="//js.hs-scripts.com/3927488.js" />
     </body>
   </html>
 )
