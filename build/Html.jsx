@@ -21,7 +21,7 @@ const Html = ({
       <meta property="og:title" content={title} />
       <meta property="og:url" content={url} />
       <meta property="og:locale" content="en_GB" />
-      <meta property="og:image" content={`${url}/img/favicon-400.png`} />
+      <meta property="og:image" content={`${url}/favicon-400.png`} />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="400" />
       <meta property="og:image:height" content="400" />
@@ -29,7 +29,7 @@ const Html = ({
       <meta name="twitter:site" content="@medialist_app" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image:src" content={`${url}/img/favicon-400.png`} />
+      <meta name="twitter:image:src" content={`${url}/favicon-400.png`} />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />

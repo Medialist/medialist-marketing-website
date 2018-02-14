@@ -15,7 +15,8 @@
     "build:static": "rsync -a static/ docs/",
     "watch:static": "nodemon -w static -e jpg,png,svg,woff,woff2,js -x npm run build",
     "watch:serve": "browser-sync start --files 'docs/bundle.*' --files 'docs/*.html' --server docs --port 4000 --reload-delay 100 --no-notify",
-    "deploy": "ipfs add -r -q docs | tail -n1 >versions/current; cat versions/current >> versions/history; cat versions/current"
+    "deploy": "ipfs add -r -q docs | tail -n1 >versions/current; cat versions/current >> versions/history; cat versions/current",
+    "deploy:surge": "surge -p docs -d medialist.surge.sh"
   },
   "repository": {
     "type": "git",
