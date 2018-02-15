@@ -10,13 +10,13 @@
     "watch": "run-p watch:*",
     "build:css": "postcss pages/main.css --output docs/bundle.css",
     "watch:css": "postcss pages/main.css --output docs/bundle.css -w",
-    "build:html": "node build/html.js --url=http://medialist.io",
+    "build:html": "node build/html.js --url=https://medialist.io",
     "watch:html": "nodemon -w pages -e js,jsx,json -x npm run build:html",
     "build:static": "rsync -a static/ docs/",
     "watch:static": "nodemon -w static -e jpg,png,svg,woff,woff2,js -x npm run build",
     "watch:serve": "browser-sync start --files 'docs/bundle.*' --files 'docs/*.html' --server docs --port 4000 --reload-delay 100 --no-notify",
     "deploy:ipfs": "ipfs add -r -q docs | tail -n1 >versions/current; cat versions/current >> versions/history; cat versions/current",
-    "deploy": "surge -p docs -d http://medialist.io"
+    "deploy": "firebase deploy"
   },
   "repository": {
     "type": "git",

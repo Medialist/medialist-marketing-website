@@ -17,7 +17,7 @@ export const EmailForm = ({relative, large}) => {
   return (
     <form data-id='email-form' className="db w-100" action="https://post.tableflip.io/medialist.io" method='post'>
       <div className='db w-100 dib-ns w-70-ns tl'>
-        <input className="input input-lg db w-100 submit-error-b--red" type="email" name="email" placeholder="Enter your email address" />
+        <input className="input input-lg db w-100 submit-error-b--red" type="email" name="email" placeholder="Enter your email address" required />
         <Feedback relative={relative}/>
       </div>
       <input type="hidden" name="g-recaptcha-response" defaultValue="skip" />
@@ -32,7 +32,7 @@ export const SmallEmailForm = ({relative, large}) => {
       <input type="hidden" name="g-recaptcha-response" defaultValue="skip" />
       <div className='dt w-100 dt--fixed'>
         <div className='dtc-ns v-mid'>
-          <input className="db input submit-error-b--red" style={{minWidth: 232}} type="email" name="email" placeholder="Enter your email address" />
+          <input className="db input submit-error-b--red" style={{minWidth: 232}} type="email" name="email" placeholder="Enter your email address" required />
           <Feedback relative={relative} />
         </div>
         <div className='dtc-ns pl2-ns' style={{width:130}}>
