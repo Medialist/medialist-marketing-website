@@ -1,0 +1,13 @@
+<svg width="40" height="24" viewBox="0 0 40 24" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        Icons / Sections / 3
+    </title>
+    <g transform="translate(0 -8)" fill="none" fill-rule="evenodd">
+        <rect fill="#86D9AD" y="10" width="15" height="4" rx="2"/>
+        <circle fill="#35BF77" cx="28" cy="20" r="12"/>
+        <path d="M27.5 12a1.5 1.5 0 0 1 1.5 1.5V22h-3v-8.5a1.5 1.5 0 0 1 1.5-1.5z" fill="#FFF"/>
+        <path d="M25.99 21.99l2.131-2.283L32 23.586c.592.591.592 1.55 0 2.142-.594.594-1.555.6-2.156.014l-3.855-3.753z" fill="#FFF"/>
+        <rect fill="#86D9AD" x="3" y="19" width="10" height="4" rx="2"/>
+        <rect fill="#86D9AD" x="6" y="28" width="10" height="4" rx="2"/>
+    </g>
+</svg>

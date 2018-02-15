@@ -1,0 +1,12 @@
+<svg width="36" height="34" viewBox="0 0 36 34" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        Icons / Sections / 1
+    </title>
+    <g transform="translate(-2 -3)" fill="none" fill-rule="evenodd">
+        <path d="M9.373 11.414L5.483 25.93a2 2 0 0 0 1.414 2.45L27.31 33.85v.184a2.207 2.207 0 0 1-2.207 2.207H4.69a2.207 2.207 0 0 1-2.207-2.207V13.621c0-1.22.988-2.207 2.207-2.207h4.683z" fill="#93DAEB"/>
+        <rect fill="#28B6D7" transform="rotate(15 23.863 16.16)" x="12.69" y="4.987" width="22.345" height="22.345" rx="2.207"/>
+        <rect fill="#FFF" opacity=".8" transform="rotate(15 24.894 11.059)" x="17.394" y="9.809" width="15" height="2.5" rx="1.25"/>
+        <rect fill="#FFF" opacity=".8" transform="rotate(15 20.021 15.088)" x="16.271" y="13.838" width="7.5" height="2.5" rx="1.25"/>
+        <rect fill="#FFF" opacity=".8" transform="rotate(15 19.979 20.412)" x="14.979" y="19.162" width="10" height="2.5" rx="1.25"/>
+    </g>
+</svg>

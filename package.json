@@ -1,0 +1,51 @@
+{
+  "name": "medialist-marketing-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-p watch:*",
+    "clean": "rm -rf docs/*",
+    "build": "run-p build:*",
+    "watch": "run-p watch:*",
+    "build:css": "postcss pages/main.css --output docs/bundle.css",
+    "watch:css": "postcss pages/main.css --output docs/bundle.css -w",
+    "build:html": "node build/html.js --url=https://medialist.io",
+    "watch:html": "nodemon -w pages -e js,jsx,json -x npm run build:html",
+    "build:static": "rsync -a static/ docs/",
+    "watch:static": "nodemon -w static -e jpg,png,svg,woff,woff2,js -x npm run build",
+    "watch:serve": "browser-sync start --files 'docs/bundle.*' --files 'docs/*.html' --server docs --port 4000 --reload-delay 100 --no-notify",
+    "deploy:ipfs": "ipfs add -r -q docs | tail -n1 >versions/current; cat versions/current >> versions/history; cat versions/current",
+    "deploy": "firebase deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Medialist/medialist-marketing-website.git"
+  },
+  "author": "olizilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Medialist/medialist-marketing-website/issues"
+  },
+  "homepage": "https://github.com/Medialist/medialist-marketing-website#readme",
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "browser-sync": "^2.23.5",
+    "cssnano": "^4.0.0-rc.2",
+    "minimist": "^1.2.0",
+    "nodemon": "^1.14.11",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^5.0.0",
+    "postcss-import": "^11.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "require-directory": "^2.1.1",
+    "standard": "^10.0.3",
+    "tachyons": "^4.9.1",
+    "urel": "^1.0.0"
+  }
+}

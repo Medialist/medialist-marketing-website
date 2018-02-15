@@ -1,0 +1,10 @@
+<svg width="33" height="30" viewBox="0 0 33 30" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        Icons / Sections / 6
+    </title>
+    <g transform="translate(-3 -5)" fill="none" fill-rule="evenodd">
+        <path d="M14.127 22a7.427 7.427 0 0 0-3.83 6.5 7.427 7.427 0 0 0 3.83 6.5H9.5a6.5 6.5 0 1 1 0-13h4.627zM18.202 5.63c-1.618 1.73-2.63 4.2-2.63 6.942s1.012 5.212 2.63 6.94a5.82 5.82 0 0 1-2.63.631c-3.63 0-6.572-3.39-6.572-7.571C9 8.39 11.942 5 15.572 5a5.82 5.82 0 0 1 2.63.63z" fill="#FCC295"/>
+        <rect fill="#FA862C" opacity=".96" x="13" y="22" width="23" height="13" rx="6.5"/>
+        <ellipse fill="#FA862C" opacity=".96" cx="24.5" cy="12.5" rx="6.5" ry="7.5"/>
+    </g>
+</svg>

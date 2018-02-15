@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-external-link-blue</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons-/-External-Link-/-Blue" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M5.79289322,4.79289322 L3.85355339,2.85355339 C3.65829124,2.65829124 3.65829124,2.34170876 3.85355339,2.14644661 C3.94732158,2.05267842 4.07449854,2 4.20710678,2 L10,2 L10,7.79289322 C10,8.06903559 9.77614237,8.29289322 9.5,8.29289322 C9.36739176,8.29289322 9.2402148,8.2402148 9.14644661,8.14644661 L7.20710678,6.20710678 L3.52512627,9.8890873 C3.32986412,10.0843494 3.01328163,10.0843494 2.81801948,9.8890873 L2.1109127,9.18198052 C1.91565056,8.98671837 1.91565056,8.67013588 2.1109127,8.47487373 L5.79289322,4.79289322 Z" id="Arrow" fill="#2B60D5"></path>
+    </g>
+</svg>
