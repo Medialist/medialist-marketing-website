@@ -28,11 +28,11 @@ function handleAllEmailForms () {
 
 function handleSendOk (form, email) {
   form.classList.add('submit-ok')
-  if (window.intercomSettings) {
-    window.intercomSettings.email = email
-  }
   form.reset()
   setTimeout(clearFormFeedback.bind(null, form), 3000)
+  if (window.Intercom) {
+    window.Intercom('update', {email: email})
+  }
 }
 
 function clearFormFeedback (form) {

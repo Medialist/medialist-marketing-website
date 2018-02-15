@@ -104,6 +104,9 @@ body {
 .hover-fill-blue:hover {
   fill: #2B60D5;
 }
+.hover-fill-white:hover {
+  fill: #fff;
+}
 .bg-gradient-1 {
   background-image: linear-gradient(-180deg, rgba(227,232,240,0.00) 0%, #E3E8F0 100%);
 }

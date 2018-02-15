@@ -27,8 +27,11 @@ const Header = ({relative, isActive}) => {
           <HeaderLink active={isActive('/how-it-works')} href={relative('/how-it-works')}>
           How it works
           </HeaderLink>
-          <HeaderLink href="http://docs.medialist.io" external>
+          <HeaderLink href='http://docs.medialist.io' external>
             Help center
+          </HeaderLink>
+          <HeaderLink href='http://blog.medialist.io' external>
+            Blog
           </HeaderLink>
         </nav>
         <div className='dn dib-l v-top'>

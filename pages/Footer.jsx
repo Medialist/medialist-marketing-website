@@ -1,12 +1,17 @@
 import React from 'react'
 import {EmailForm} from './EmailForm'
 
-const FooterLink = ({active, href, children}) => {
+const FooterLink = ({active, href, children, external}) => {
   return (
     <a
       href={href}
-      className={`db dib-ns nav-link hover-white ${active ? 'white' : 'light-gray'}`} >
+      className={`db dib-ns nav-link hover-white fill-gray hover-fill-white ${active ? 'white' : 'light-gray'}`} >
       {children}
+      {external ? (
+        <svg className='ml1' width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.793 4.793l-1.94-1.94A.5.5 0 0 1 4.208 2H10v5.793a.5.5 0 0 1-.854.353L7.207 6.207 3.525 9.89a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.682-3.682z" fillRule="evenodd"/>
+        </svg>
+      ) : null}
     </a>
   )
 }
@@ -26,11 +31,6 @@ const Footer = ({relative, isActive}) => {
           </div>
           <div className="dtc-l w-50-l tr-l v-mid">
             <EmailForm relative={relative} />
-            {/* <form className="db w-100" action="https://post.tableflip.io/medialist.io">
-              <input className="input input-lg db w-100 dib-ns w-70-ns" type="email" name="email" placeholder="Enter your email address" />
-              <input type="hidden" name="g-recaptcha-response" defaultValue="skip" />
-              <button className="btn btn-orange bubble-left btn-lg w-100 w-auto-ns db dib-ns mt3 mt0-ns ml2-ns" type="submit" name="button">Get a demo</button>
-            </form> */}
           </div>
         </div>
       </section>
@@ -44,11 +44,14 @@ const Footer = ({relative, isActive}) => {
               </span>
             </div>
             <nav className="db dtc-l tc ph2 pv2 w-30-l">
-              <FooterLink href='http://docs.medialist.io'>
-                Help Center
-              </FooterLink>
               <FooterLink href={relative('/how-it-works')} active={isActive('/how-it-works')}>
                 How it works
+              </FooterLink>
+              <FooterLink href='http://docs.medialist.io' external>
+                Help Center
+              </FooterLink>
+              <FooterLink href='https://blog.medialist.io' external>
+                Blog
               </FooterLink>
             </nav>
             <nav className="db dtc-l ph2 pv2 tr-l">
