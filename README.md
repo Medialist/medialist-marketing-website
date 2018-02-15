@@ -1,4 +1,4 @@
-# ![](https://medialist-io.firebaseapp.com/img/icon.svg) medialist.io
+# ![medialist.io](https://medialist-io.firebaseapp.com/img/logo.svg)
 
 <img width="1328" alt="screenshot 2018-02-15 17 37 47" src="https://user-images.githubusercontent.com/58871/36271611-f8fa0fb2-1276-11e8-8689-0535ae7892a4.png" />
 
@@ -29,4 +29,4 @@ npm run build
 npm run deploy
 ```
 
-![](https://medialist-io.firebaseapp.com/img/logo.svg)
+![](https://medialist-io.firebaseapp.com/img/icon.svg)
