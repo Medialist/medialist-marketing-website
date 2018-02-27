@@ -23,7 +23,7 @@ const Footer = ({relative, isActive}) => {
         <div className="mw-lg dt-l w-100 pt5 pb5 ph2">
           <div className="dtc-l w-50-l pr3-l pb3 pb0-l tc tl-l">
             <h1 className="f2 fw6 ma0 serif navy">
-              Get started with Medialist
+              Transform your PR organisation
             </h1>
             <p className="f5 ma0 gray lh-copy">
               A better way to manage influencer relationships and campaigns.
@@ -37,13 +37,16 @@ const Footer = ({relative, isActive}) => {
       <section className="bg-navy white">
         <div className="mw-lg pv2">
           <div className="dt-l dt--fixed w-100 tc tl-l">
-            <div className="dn dtc-l">
+            <div className="dn dtc-l w-20-l">
               <img src={relative('/img/icon.svg')} className="v-mid" style={{width: 18, height: 23}} />
               <span className="gray v-mid fw1 pl2 f6">
                 ©️ 2018 Medialist.io
               </span>
             </div>
-            <nav className="db dtc-l tc ph2 pv2 w-30-l">
+            <nav className="db dtc-l tc w-50-l pv2">
+              <FooterLink href={'mailto:hello@medialist.io'}>
+                Contact us
+              </FooterLink>
               <FooterLink href={relative('/how-it-works')} active={isActive('/how-it-works')}>
                 How it works
               </FooterLink>
@@ -66,7 +69,7 @@ const Footer = ({relative, isActive}) => {
                 </svg>
               </a>
             </nav>
-            <div className="dtc-l pv2 tr-l">
+            <div className="dtc-l pv2 tr-l w-20-l">
               <span className="gray v-mid fw1 pl2 f6">
                 13 Radnor Walk, London, SW3 4BP
               </span>

@@ -141,6 +141,11 @@ body {
   border: 2px solid #E5731A;
 }
 
+.btn-green {
+  background: #35BF77;
+  border: 2px solid #31B36F;
+}
+
 .bubble-left {
   border-radius: 8px 8px 8px 2px;
 }
@@ -202,12 +207,17 @@ body {
 }
 
 .screenshot {
-  background: #F4F6FA;
+  display: inline-block;
+  background: #F4F6FA url('img/browser-bar.svg') no-repeat 12px 7px;
   border: 1px solid #E3E8F0;
-  border-radius: 2px;
+  border-radius: 2px 0 0 2px;
   box-shadow: 0 16px 24px 0 rgba(0,0,0,0.08);
+  padding-top: 24px;
   margin-top: 24px;
   margin-bottom: 24px;
+}
+.screenshot-left {
+  background-position: -220px 7px; 
 }
 
 .bg-stroke {

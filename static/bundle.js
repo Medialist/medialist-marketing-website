@@ -30,9 +30,6 @@ function handleSendOk (form, email) {
   form.classList.add('submit-ok')
   form.reset()
   setTimeout(clearFormFeedback.bind(null, form), 3000)
-  if (window.Intercom) {
-    window.Intercom('update', {email: email})
-  }
 }
 
 function clearFormFeedback (form) {
@@ -41,3 +38,7 @@ function clearFormFeedback (form) {
 }
 
 handleAllEmailForms()
+
+if (window.baguetteBox) {
+  baguetteBox.run('.gallery')
+}

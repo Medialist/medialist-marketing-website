@@ -17,19 +17,6 @@ const Home = ({relative, isActive}) => {
               Medialist is a simpler and easier way to create media lists, track outreach and manage all your influencer relationships from one place.
             </p>
             <EmailForm relative={relative} />
-            {/* <form data-id='email-form' className="db w-100" action="http://localhost:1337/oli.zilla.org.uk" method='post'>
-              <input className="input input-lg db w-100 dib-ns w-70-ns submit-error-b--red" type="email" name="email" placeholder="Enter your email address" />
-              <input type="hidden" name="g-recaptcha-response" defaultValue="skip" />
-              <button className="btn btn-orange bubble-left btn-lg w-100 w-auto-ns db dib-ns mt3 mt0-ns ml2-ns" type="submit" name="button">Get a demo</button>
-              <div className='pt1 dn submit-ok-db fw5 green' style={{fontSize: 14}}>
-                <img className='mr1' src={relative('/img/email-success.svg')} />
-                <span>Success! We'll be in touch soon.</span>
-              </div>
-              <div className='pt1 dn submit-error-db fw5 red' style={{fontSize: 14}}>
-                <img className='mr1' src={relative('/img/email-error.svg')} />
-                <span>Sorry, there was an error. Please try again.</span>
-              </div>
-            </form> */}
           </div>
         </div>
         <img className="db dn-l w-100 pt3" src={relative('/img/illustration-1.png')} />
@@ -82,6 +69,11 @@ const Home = ({relative, isActive}) => {
       <Footer relative={relative} isActive={isActive} />
     </div>
   )
+}
+
+Home.meta = {
+  title: 'Medialist: Influencer Relationship and Campaign Management for PR teams',
+  description: 'Medialist is a simpler and easier way to create media lists, track outreach and manage all your influencer relationships from one place.'
 }
 
 export default Home

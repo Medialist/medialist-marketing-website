@@ -4,21 +4,27 @@ import Footer from '../Footer'
 
 const ScreenshotLeft = ({src}) => (
   <div className='relative overflow-hidden'>
-    <img className='screenshot nl3 nl6-ns' style={{width: 880}} src={src} />
+    <a href={src}>
+      <img className='screenshot screenshot-left nl3 nl6-ns' style={{width: 880}} src={src} />
+    </a>
     <div className='absolute top-0 left-0 bottom-0 fade-out-left' style={{width: 150}} />
   </div>
 )
 
 const ScreenshotRight = ({src}) => (
   <div className='relative overflow-hidden'>
-    <img className='screenshot ml3 ml6-ns' style={{width: 880}} src={src} />
+    <a href={src} className='screenshot ml3 ml6-ns'>
+      <img className='' style={{width: 880}} src={src} />
+    </a>
     <div className='absolute top-0 right-0 bottom-0 fade-out-right' style={{width: 150}} />
   </div>
 )
 
 const ScreenshotBottom = ({src}) => (
   <div className='relative overflow-hidden'>
-    <img className='screenshot fade-out-bottom' style={{width: 880, marginBottom: -5}} src={src} />
+    <a href={src} className='browser-bar'>
+      <img className='screenshot fade-out-bottom' style={{width: 880, marginBottom: -5}} src={src} />
+    </a>
     <div className='absolute left-0 right-0 bottom-0 fade-out-bottom' style={{height: 100}} />
   </div>
 )
@@ -99,7 +105,7 @@ const SectionTextCenter = ({imgSrc, iconSrc, title, text}) => {
 
 const HowItWorks = ({relative, isActive}) => {
   return (
-    <div>
+    <div className='gallery'>
       <Header relative={relative} isActive={isActive} />
       <section style={{background: `url(${relative('/img/how-it-works-bg.svg')}) no-repeat bottom left`}}>
         <div className='center pt5-l ph2 pb4 tc' style={{maxWidth: 620}}>
@@ -183,6 +189,11 @@ const HowItWorks = ({relative, isActive}) => {
       <Footer relative={relative} isActive={isActive} />
     </div>
   )
+}
+
+HowItWorks.meta = {
+  title: 'How Medialist works: what it’s like to organise all your Influencer Relationships and PR campaigns from one place',
+  description: 'Instead of having media lists, feedback, briefing books and contact information all over the place, Medialist brings all your team’s influencer intelligence and PR campaigns under one roof.'
 }
 
 export default HowItWorks

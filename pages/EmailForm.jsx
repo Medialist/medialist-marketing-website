@@ -21,7 +21,7 @@ export const EmailForm = ({relative, large}) => {
         <Feedback relative={relative}/>
       </div>
       <input type="hidden" name="g-recaptcha-response" defaultValue="skip" />
-      <button className="btn btn-orange bubble-left btn-lg w-100 w-auto-ns db dib-ns mt3 mt0-ns ml2-ns v-top" type="submit" name="button">Get a demo</button>
+      <button className="btn btn-green bubble-left btn-lg w-100 w-auto-ns db dib-ns mt3 mt0-ns ml2-ns v-top pointer" type="submit" name="button">Learn More</button>
     </form>
   )
 }
@@ -36,7 +36,7 @@ export const SmallEmailForm = ({relative, large}) => {
           <Feedback relative={relative} />
         </div>
         <div className='dtc-ns pl2-ns' style={{width:130}}>
-          <button className="btn btn-blue bubble-left w-100 w-auto-ns db dib-ns mt3 mt0-ns v-top" type="submit" name="button">Get a demo</button>
+          <button className="btn btn-blue bubble-left w-100 w-auto-ns db dib-ns mt3 mt0-ns v-top pointer" type="submit" name="button">Learn More</button>
         </div>
       </div>
     </form>

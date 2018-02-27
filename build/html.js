@@ -26,12 +26,13 @@ function renderToHtml (srcPath, baseUrl) {
     assetPath = assetPath.startsWith('/') ? assetPath : `/${assetPath}`
     return relativeUrl(baseUrl, assetPath) === './'
   }
+  const Component = require(srcPath).default
   const props = {
     ...argv,
+    ...Component.meta,
     relative,
-    isActive
+    isActive,
   }
-  const Component = require(srcPath).default
   const children = createElement(Component, props)
   const html = renderToStaticMarkup(createElement(Html, {children, ...props}))
   return html
