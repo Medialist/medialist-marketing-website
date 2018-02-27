@@ -2,10 +2,30 @@ import React from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
 
+const FullsizeButton = ({style}) => (
+  <button className='sans-serif bn f6 fw5 white absolute pointer' style={{
+    ...style,
+    lineHeight: '20px',
+    background: '#4F5E6F',
+    boxShadow: '0 1px 2px 0 rgba(0,0,0,0.10)',
+    borderRadius: '2px',
+    padding: '8px 16px'
+  }}>
+    <svg style={{verticalAlign: '-1px'}} width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7.732 0H12v4.268h-1.691V1.691H7.732V0zm2.577 10.309V7.732H12V12H7.732v-1.691h2.577zM0 4.269V0h4.268v1.691H1.691v2.577H0zm1.691 3.463v2.577h2.577V12H0V7.732h1.691z" fill="#FFF" fillRule="evenodd"/>
+    </svg>
+    <span className='ml2'>See full image</span>
+  </button>
+)
+
 const ScreenshotLeft = ({src}) => (
   <div className='relative overflow-hidden'>
     <a href={src}>
       <img className='screenshot screenshot-left nl3 nl6-ns' style={{width: 880}} src={src} />
+      <FullsizeButton style={{
+        right: '140px',
+        bottom: '42px'
+      }} />
     </a>
     <div className='absolute top-0 left-0 bottom-0 fade-out-left' style={{width: 150}} />
   </div>
@@ -13,17 +33,27 @@ const ScreenshotLeft = ({src}) => (
 
 const ScreenshotRight = ({src}) => (
   <div className='relative overflow-hidden'>
-    <a href={src} className='screenshot ml3 ml6-ns'>
-      <img className='' style={{width: 880}} src={src} />
+    <a href={src}>
+      <img className='screenshot ml3 ml6-ns' style={{width: 880}} src={src} />
+      <FullsizeButton style={{
+        left: '140px',
+        bottom: '42px'
+      }} />
     </a>
     <div className='absolute top-0 right-0 bottom-0 fade-out-right' style={{width: 150}} />
   </div>
 )
 
 const ScreenshotBottom = ({src}) => (
-  <div className='relative overflow-hidden'>
+  <div className='relative overflow-hidden tc'>
     <a href={src} className='browser-bar'>
       <img className='screenshot fade-out-bottom' style={{width: 880, marginBottom: -5}} src={src} />
+      <FullsizeButton style={{
+        left: '50%',
+        transform: 'translateX(-50%)',
+        bottom: '8px',
+        zIndex: 1000
+      }} />
     </a>
     <div className='absolute left-0 right-0 bottom-0 fade-out-bottom' style={{height: 100}} />
   </div>
