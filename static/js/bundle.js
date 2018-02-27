@@ -40,5 +40,7 @@ function clearFormFeedback (form) {
 handleAllEmailForms()
 
 if (window.baguetteBox) {
-  baguetteBox.run('.gallery')
+  baguetteBox.run('.gallery', {
+    overlayBackgroundColor: '#24364C'
+  })
 }

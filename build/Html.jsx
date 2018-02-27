@@ -40,11 +40,11 @@ const Html = ({
     </head>
     <body>
       {children}
-      <script src={relative('/bundle.js')} />
-      <script async defer src={relative('/intercom.js')}  />
+      <script src={relative('/js/bundle.js')} />
+      <script async defer src={relative('/js/intercom.js')}  />
       <script async defer src="https://js.hs-scripts.com/3927488.js" id="hs-script-loader" />
       <script async defer src="https://www.googletagmanager.com/gtag/js?id=UA-113401636-1" />
-      <script async defer src={relative('/ga.js')} />
+      <script async defer src={relative('/js/ga.js')} />
     </body>
   </html>
 )
