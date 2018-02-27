@@ -41,8 +41,10 @@ const Html = ({
     <body>
       {children}
       <script src={relative('/bundle.js')} />
-      <script src={relative('/intercom.js')} async defer />
-      <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/3927488.js" />
+      <script async defer src={relative('/intercom.js')}  />
+      <script async defer src="https://js.hs-scripts.com/3927488.js" id="hs-script-loader" />
+      <script async defer src="https://www.googletagmanager.com/gtag/js?id=UA-113401636-1" />
+      <script async defer src={relative('/ga.js')} />
     </body>
   </html>
 )
