@@ -44,8 +44,10 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "require-directory": "^2.1.1",
-    "standard": "^10.0.3",
     "tachyons": "^4.9.1",
     "urel": "^1.0.0"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
   }
 }

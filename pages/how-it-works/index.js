@@ -18,10 +18,56 @@ const FullsizeButton = ({style}) => (
   </button>
 )
 
-const ScreenshotLeft = ({src, title, alt}) => (
+function toImgUrl ({relative, imgPath = '/img/screens', imgId, width}) {
+  return relative(`${imgPath}/${imgId}-${width}w.jpg`)
+}
+
+function toSrcSet ({relative, imgPath = '/img/screens', imgId, widths = [1005, 2010]}) {
+  const src = widths.map(width => {
+    const url = toImgUrl({relative, imgPath, imgId, width})
+    return `${url} ${width}w`
+  })
+  return src.join(',')
+}
+
+const SrcSetImage = ({relative, imgPath, imgId, widths, ...props}) => {
+  const src = toImgUrl({relative, imgPath, imgId, width: widths[0]})
+  const srcSet = toSrcSet({relative, imgPath, imgId, widths})
+  return <img {...props} src={src} srcSet={srcSet} />
+}
+
+const Screenshot = ({relative, imgId, imgPath, widths, style, ...props}) => (
+  <SrcSetImage
+    {...props}
+    style={{
+      ...style,
+      width: 880
+    }}
+    widths={widths}
+    imgId={imgId}
+    imgPath={imgPath}
+    relative={relative}
+  />
+)
+
+const Icon = ({relative, imgPath = '/img/icons', imgId, ...props}) => {
+  const iconSrc = relative(`${imgPath}/${imgId}.svg`)
+  return <img {...props} src={iconSrc} alt='' />
+}
+
+const ScreenshotLeft = ({relative, imgId, title, alt, imgPath = '/img/screens', widths = [1005, 2010]}) => (
   <div className='relative overflow-hidden'>
-    <a href={src} title={title} style={{outline: 'none'}}>
-      <img className='screenshot screenshot-left nl3 nl6-ns' style={{width: 880}} src={src} alt={alt}/>
+    <a
+      href={toImgUrl({relative, imgPath, imgId, width: widths[1]})}
+      title={title}
+      style={{outline: 'none'}}>
+      <Screenshot
+        widths={widths}
+        relative={relative}
+        imgId={imgId}
+        className='screenshot screenshot-left nl3 nl6-ns'
+        alt={alt}
+      />
       <FullsizeButton style={{
         right: '140px',
         bottom: '42px'
@@ -31,10 +77,19 @@ const ScreenshotLeft = ({src, title, alt}) => (
   </div>
 )
 
-const ScreenshotRight = ({src, title, alt}) => (
+const ScreenshotRight = ({relative, imgId, title, alt, imgPath = '/img/screens', widths = [1005, 2010]}) => (
   <div className='relative overflow-hidden'>
-    <a href={src} title={title} style={{outline: 'none'}}>
-      <img className='screenshot ml3 ml6-ns' style={{width: 880}} src={src} alt={alt} />
+    <a
+      href={toImgUrl({relative, imgPath, imgId, width: widths[1]})}
+      title={title}
+      style={{outline: 'none'}}>
+      <Screenshot
+        widths={widths}
+        relative={relative}
+        imgId={imgId}
+        className='screenshot ml3 ml6-ns'
+        alt={alt}
+      />
       <FullsizeButton style={{
         left: '140px',
         bottom: '42px'
@@ -44,10 +99,20 @@ const ScreenshotRight = ({src, title, alt}) => (
   </div>
 )
 
-const ScreenshotBottom = ({src, title, alt}) => (
+const ScreenshotBottom = ({relative, imgId, title, alt, imgPath = '/img/screens', widths = [1005, 2010]}) => (
   <div className='relative overflow-hidden tc'>
-    <a href={src} title={title} style={{outline: 'none'}}>
-      <img className='screenshot fade-out-bottom' style={{width: 880, marginBottom: -5}} src={src} alt={alt} />
+    <a
+      href={toImgUrl({relative, imgPath, imgId, width: widths[1]})}
+      title={title}
+      style={{outline: 'none'}}>
+      <Screenshot
+        widths={widths}
+        relative={relative}
+        imgId={imgId}
+        className='screenshot fade-out-bottom'
+        style={{marginBottom: -5}}
+        alt={alt}
+      />
       <FullsizeButton style={{
         left: '50%',
         transform: 'translateX(-50%)',
@@ -59,7 +124,7 @@ const ScreenshotBottom = ({src, title, alt}) => (
   </div>
 )
 
-const SectionTextLeft = ({className, imgSrc, imgAlt, imgTitle, iconSrc, title, text}) => {
+const SectionTextLeft = ({className, relative, imgId, imgAlt, imgTitle, iconId, title, text}) => {
   const paras = Array.isArray(text) ? text : [text]
   return (
     <section className={className}>
@@ -67,7 +132,7 @@ const SectionTextLeft = ({className, imgSrc, imgAlt, imgTitle, iconSrc, title, t
         <div className='dtc-l w-50-l v-mid tr'>
           <div className='dib tl ph2 pb4' style={{maxWidth: 610}}>
             <h2 className='tc tl-ns f2 fw6 mb3 serif navy'>
-              <img className='mr2' src={iconSrc} />
+              <Icon relative={relative} className='mr2' imgId={iconId} />
               {title}
             </h2>
             {paras.map(text => (
@@ -79,25 +144,26 @@ const SectionTextLeft = ({className, imgSrc, imgAlt, imgTitle, iconSrc, title, t
           </div>
         </div>
         <div className='dtc-l w-50-l v-mid'>
-          <ScreenshotRight src={imgSrc} title={imgTitle} alt={imgAlt} />
+          <ScreenshotRight relative={relative} imgId={imgId}  title={imgTitle} alt={imgAlt} />
         </div>
       </div>
     </section>
   )
 }
 
-const SectionTextRight = ({className, imgSrc, imgAlt, imgTitle, iconSrc, title, text}) => {
+const SectionTextRight = ({className, relative, imgId, imgAlt, imgTitle, iconId, title, text}) => {
   const paras = Array.isArray(text) ? text : [text]
+  const iconSrc = relative(`/img/icons/${iconId}.svg`)
   return (
     <section className={className}>
       <div className='pv5 dt-l w-100 dt--fixed mw-xl'>
         <div className='dtc-l w-50-l v-mid'>
-          <ScreenshotLeft src={imgSrc} title={imgTitle} alt={imgAlt} />
+          <ScreenshotLeft relative={relative} imgId={imgId} title={imgTitle} alt={imgAlt} />
         </div>
         <div className='dtc-l w-50-l v-mid tr tl-l'>
           <div className='dib tl ph2 pb4' style={{maxWidth: 610}}>
             <h2 className='tc tl-ns f2 fw6 mb3 serif navy'>
-              <img className='mr2' src={iconSrc} />
+              <Icon relative={relative} className='mr2' imgId={iconId} />
               {title}
             </h2>
             {paras.map(text => (
@@ -113,13 +179,14 @@ const SectionTextRight = ({className, imgSrc, imgAlt, imgTitle, iconSrc, title, 
   )
 }
 
-const SectionTextCenter = ({imgSrc, imgAlt, imgTitle, iconSrc, title, text}) => {
+const SectionTextCenter = ({relative, imgId, imgAlt, imgTitle, iconId, title, text}) => {
   const paras = Array.isArray(text) ? text : [text]
+  const iconSrc = relative(`/img/icons/${iconId}.svg`)
   return (
     <section className='tc'>
       <div className='measure-wide center pt5 ph2 pb4'>
         <h2 className='f2 fw6 mb3 serif navy'>
-          <img className='mr2' src={iconSrc} />
+          <Icon relative={relative} className='mr2' imgId={iconId} />
           {title}
         </h2>
         {paras.map(text => (
@@ -128,7 +195,7 @@ const SectionTextCenter = ({imgSrc, imgAlt, imgTitle, iconSrc, title, text}) => 
           </p>
         ))}
       </div>
-      <ScreenshotBottom src={imgSrc} title={imgTitle} alt={imgAlt} />
+      <ScreenshotBottom relative={relative} imgId={imgId} title={imgTitle} alt={imgAlt} />
     </section>
   )
 }
@@ -154,9 +221,10 @@ const HowItWorks = ({relative, isActive}) => {
       </section>
 
       <SectionTextLeft
+        relative={relative}
         className='bt b--light-gray'
-        iconSrc={relative('/img/icons/1.svg')}
-        imgSrc={relative('/img/screens/campaign-activity.jpg')}
+        iconId='1'
+        imgId='campaign-activity'
         imgTitle='The campaign profile — all your campaign outreach in one place.'
         imgAlt='The campaign profile — PR campaign feedback, notes and influencers all in one place.'
         title='A home for every campaign'
@@ -164,9 +232,10 @@ const HowItWorks = ({relative, isActive}) => {
       />
 
       <SectionTextRight
+        relative={relative}
         className='bg-gradient-2'
-        iconSrc={relative('/img/icons/2.svg')}
-        imgSrc={relative('/img/screens/campaign-contacts-list.jpg')}
+        iconId='2'
+        imgId='campaign-contacts-list'
         imgTitle='The campaign contacts list — a real time view into the status of your campaign.'
         imgAlt='The campaign contacts list — a list of all your PR campaign contacts, statuses, notes, coverage and owners.'
         title='Move outreach forwards'
@@ -174,8 +243,9 @@ const HowItWorks = ({relative, isActive}) => {
       />
 
       <SectionTextCenter
-        iconSrc={relative('/img/icons/3.svg')}
-        imgSrc={relative('/img/screens/global-contacts-list.jpg')}
+        relative={relative}
+        iconId='3'
+        imgId='global-campaigns-list'
         imgTitle='The global campaigns list — all your campaigns in one place.'
         imgAlt='The global campaigns list — a list of all your PR campaigns.'
         title='Find campaigns, faster'
@@ -183,9 +253,10 @@ const HowItWorks = ({relative, isActive}) => {
       />
 
       <SectionTextLeft
+        relative={relative}
         className='bg-gradient-3'
-        iconSrc={relative('/img/icons/4.svg')}
-        imgSrc={relative('/img/screens/contact-activity.jpg')}
+        iconId='4'
+        imgId='contact-activity'
         imgTitle='The contact profile — all your influencer intelligence in one place.'
         imgAlt='The contact profile — all your PR campaign feedback, notes and contact information for an influencer, in one place.'
         title='Make insights actionable'
@@ -196,9 +267,10 @@ const HowItWorks = ({relative, isActive}) => {
       />
 
       <SectionTextRight
+        relative={relative}
         className='bg-white'
-        iconSrc={relative('/img/icons/5.svg')}
-        imgSrc={relative('/img/screens/contact-campaigns.jpg')}
+        iconId='5'
+        imgId='contact-campaigns-list'
         imgTitle='The contact campaigns list — all your pitches for an influencer in one place.'
         imgAlt='The contact campaigns list — a list of all your PR campaigns associated with an influencer.'
         title='Learn from every campaign'
@@ -209,9 +281,10 @@ const HowItWorks = ({relative, isActive}) => {
       />
 
       <SectionTextLeft
+        relative={relative}
         className='bg-gradient-3'
-        iconSrc={relative('/img/icons/6.svg')}
-        imgSrc={relative('/img/screens/contact-list.jpg')}
+        iconId='6'
+        imgId='global-contacts-list'
         imgTitle='The global contacts list — all your contacts in one place.'
         imgAlt='The global contacts list — a list of all your PR contacts in one place.'
         title='Make relationships an advantage'
@@ -222,8 +295,9 @@ const HowItWorks = ({relative, isActive}) => {
       />
 
       <SectionTextCenter
-        iconSrc={relative('/img/icons/7.svg')}
-        imgSrc={relative('/img/screens/global-dashboard.jpg')}
+        relative={relative}
+        iconId='7'
+        imgId='global-dashboard'
         imgTitle='Your global dashboard — everything, together.'
         imgAlt='Your global dashboard — see all your PR team’s campaign feedback, coverage, and more, in one newsfeed.'
         title='Everything, together'
