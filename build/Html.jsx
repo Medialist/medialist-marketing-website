@@ -16,6 +16,8 @@ const Html = ({
       <meta name='description' content={description} />
       <title>{title}</title>
       <link href={relative('bundle.css')} rel='stylesheet' />
+      <script async defer src="https://www.googletagmanager.com/gtag/js?id=UA-113401636-1" />
+      <script async defer src={relative('/js/ga.js')} />
       <meta property="og:type" content="website" />
       <meta property="og:description" content={description} />
       <meta property="og:title" content={title} />
@@ -43,8 +45,6 @@ const Html = ({
       <script src={relative('/js/bundle.js')} />
       <script async defer src={relative('/js/intercom.js')}  />
       <script async defer src="https://js.hs-scripts.com/3927488.js" id="hs-script-loader" />
-      <script async defer src="https://www.googletagmanager.com/gtag/js?id=UA-113401636-1" />
-      <script async defer src={relative('/js/ga.js')} />
     </body>
   </html>
 )

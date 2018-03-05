@@ -2,12 +2,46 @@ import React from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
 import {EmailForm} from '../EmailForm'
+import {SrcSetImage} from '../Image.jsx'
 
 const Home = ({relative, isActive}) => {
   return (
     <div>
       <Header relative={relative} isActive={isActive} />
-      <section className='bg-illustration-1'>
+      <section className='pt3'>
+        <div className='pv5 dt-l w-100 dt--fixed mw-xl'>
+          <div className='dtc-l w-42-l v-mid tr'>
+            <div className='dib-l center tc tl-l ph2 ph3-l pb4' style={{width: 470, maxWidth: '100%'}}>
+              <h1 className='fw6 mt0 mb3 serif navy' style={{fontSize: '40px', lineHeight: '56px'}}>
+                <span className='bg-stroke'>A better way to </span> manage influencer relationships and campaigns
+              </h1>
+              <p className='mb4 mid-gray' style={{fontSize: '18px', lineHeight: '30px'}}>
+                Medialist is a simpler and easier way to create media lists, track outreach and manage all your influencer relationships from one place.
+              </p>
+              <EmailForm relative={relative} />
+            </div>
+          </div>
+          <div className='dtc-l w-58-l v-top'>
+            <SrcSetImage
+              relative={relative}
+              imgPath='/img'
+              imgId='pr-machine'
+              widths={[824, 1648]}
+              style={{width: 824, marginTop: '-28px'}}
+              alt='A fast, efficient, PR machine'
+            />
+          </div>
+        </div>
+        <div className='pv3 tc dn db-l'>
+          <a className='dib pa2 blue link' href='#save-time'>
+            Learn more below
+            <img className='ml1 v-mid' src={relative('/img/arrow.svg')} />
+          </a>
+          <hr className='hr hr-light' />
+        </div>
+      </section>
+
+      {/* <section className='mt3 mt5-l bg-illustration-1'>
         <div className='mw-lg'>
           <div className='mw6 ph2 tc tl-l db dib-l center ma0-l'>
             <h1 className='f1 fw6 mt0 mb4 serif navy bg-stroke'>
@@ -19,7 +53,14 @@ const Home = ({relative, isActive}) => {
             <EmailForm relative={relative} />
           </div>
         </div>
-        <img className='db dn-l w-100 pt3' src={relative('/img/illustration-1.png')} />
+        <SrcSetImage
+          relative={relative}
+          className='db dn-l w-100 pt3'
+          imgPath='/img'
+          imgId='pr-machine'
+          widths={[824, 1648]}
+          alt='A fast, efficient, PR machine'
+        />
         <div className='pt5 tc dn db-l'>
           <a className='dib pa2 blue link' href='#save-time'>
             Learn more below
@@ -27,7 +68,7 @@ const Home = ({relative, isActive}) => {
           </a>
           <hr className='hr hr-light' />
         </div>
-      </section>
+      </section> */}
       <section id='save-time' style={{marginBottom: -5}}>
         <div className='mw-lg pt3 ph2 tc tl-l'>
           <div className='dt-l dt--fixed w-100'>

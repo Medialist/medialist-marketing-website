@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
+import {SrcSetImage, toImgUrl} from '../Image.jsx'
 
 const FullsizeButton = ({style}) => (
   <button className='sans-serif bn f6 fw5 white absolute pointer' style={{
@@ -11,32 +12,14 @@ const FullsizeButton = ({style}) => (
     borderRadius: '2px',
     padding: '8px 16px'
   }}>
-    <svg style={{verticalAlign: '-1px'}} width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-      <path d="M7.732 0H12v4.268h-1.691V1.691H7.732V0zm2.577 10.309V7.732H12V12H7.732v-1.691h2.577zM0 4.269V0h4.268v1.691H1.691v2.577H0zm1.691 3.463v2.577h2.577V12H0V7.732h1.691z" fill="#FFF" fillRule="evenodd"/>
+    <svg style={{verticalAlign: '-1px'}} width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'>
+      <path d='M7.732 0H12v4.268h-1.691V1.691H7.732V0zm2.577 10.309V7.732H12V12H7.732v-1.691h2.577zM0 4.269V0h4.268v1.691H1.691v2.577H0zm1.691 3.463v2.577h2.577V12H0V7.732h1.691z' fill='#FFF' fillRule='evenodd' />
     </svg>
     <span className='ml2'>See full image</span>
   </button>
 )
 
-function toImgUrl ({relative, imgPath = '/img/screens', imgId, width}) {
-  return relative(`${imgPath}/${imgId}-${width}w.jpg`)
-}
-
-function toSrcSet ({relative, imgPath = '/img/screens', imgId, widths = [1005, 2010]}) {
-  const src = widths.map(width => {
-    const url = toImgUrl({relative, imgPath, imgId, width})
-    return `${url} ${width}w`
-  })
-  return src.join(',')
-}
-
-const SrcSetImage = ({relative, imgPath, imgId, widths, ...props}) => {
-  const src = toImgUrl({relative, imgPath, imgId, width: widths[0]})
-  const srcSet = toSrcSet({relative, imgPath, imgId, widths})
-  return <img {...props} src={src} srcSet={srcSet} />
-}
-
-const Screenshot = ({relative, imgId, imgPath, widths, style, ...props}) => (
+const Screenshot = ({relative, imgId, imgPath = '/img/screens', widths = [1005, 2010], style, ...props}) => (
   <SrcSetImage
     {...props}
     style={{
@@ -136,7 +119,7 @@ const SectionTextLeft = ({className, relative, imgId, imgAlt, imgTitle, iconId, 
               {title}
             </h2>
             {paras.map(text => (
-              <p className="f4 mid-gray lh-copy" key={text}>
+              <p className='f4 mid-gray lh-copy' key={text}>
                 {text}
               </p>
             ))}
@@ -144,7 +127,7 @@ const SectionTextLeft = ({className, relative, imgId, imgAlt, imgTitle, iconId, 
           </div>
         </div>
         <div className='dtc-l w-50-l v-mid'>
-          <ScreenshotRight relative={relative} imgId={imgId}  title={imgTitle} alt={imgAlt} />
+          <ScreenshotRight relative={relative} imgId={imgId} title={imgTitle} alt={imgAlt} />
         </div>
       </div>
     </section>
@@ -153,7 +136,6 @@ const SectionTextLeft = ({className, relative, imgId, imgAlt, imgTitle, iconId, 
 
 const SectionTextRight = ({className, relative, imgId, imgAlt, imgTitle, iconId, title, text}) => {
   const paras = Array.isArray(text) ? text : [text]
-  const iconSrc = relative(`/img/icons/${iconId}.svg`)
   return (
     <section className={className}>
       <div className='pv5 dt-l w-100 dt--fixed mw-xl'>
@@ -167,7 +149,7 @@ const SectionTextRight = ({className, relative, imgId, imgAlt, imgTitle, iconId,
               {title}
             </h2>
             {paras.map(text => (
-              <p className="f4 mid-gray lh-copy" key={text}>
+              <p className='f4 mid-gray lh-copy' key={text}>
                 {text}
               </p>
             ))}
@@ -181,7 +163,6 @@ const SectionTextRight = ({className, relative, imgId, imgAlt, imgTitle, iconId,
 
 const SectionTextCenter = ({relative, imgId, imgAlt, imgTitle, iconId, title, text}) => {
   const paras = Array.isArray(text) ? text : [text]
-  const iconSrc = relative(`/img/icons/${iconId}.svg`)
   return (
     <section className='tc'>
       <div className='measure-wide center pt5 ph2 pb4'>
@@ -190,7 +171,7 @@ const SectionTextCenter = ({relative, imgId, imgAlt, imgTitle, iconId, title, te
           {title}
         </h2>
         {paras.map(text => (
-          <p className="f4 mid-gray lh-copy" key={text}>
+          <p className='f4 mid-gray lh-copy' key={text}>
             {text}
           </p>
         ))}
@@ -209,7 +190,7 @@ const HowItWorks = ({relative, isActive}) => {
           <h1 className='f1 fw6 mb4 serif navy'>
             Here’s how Medialist works
           </h1>
-          <p className="f4 mb5 mid-gray lh-copy tl tc-ns">
+          <p className='f4 mb5 mid-gray lh-copy tl tc-ns'>
             Instead of having media lists, feedback, briefing books and contact
             information all over the place — lost in inboxes and scattered
             across hard to find spreadsheets and documents — Medialist brings

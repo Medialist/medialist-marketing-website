@@ -15,28 +15,28 @@ const Feedback = ({relative}) => (
 
 export const EmailForm = ({relative, large}) => {
   return (
-    <form data-id='email-form' className="db w-100" action="https://post.tableflip.io/medialist.io" method='post'>
-      <div className='db w-100 dib-ns w-70-ns tl'>
-        <input className="input input-lg db w-100 submit-error-b--red" type="email" name="email" placeholder="Enter your email address" required />
-        <Feedback relative={relative}/>
+    <form data-id='email-form' className='db w-100' action='https://post.tableflip.io/medialist.io' method='post'>
+      <div className='db w-100 dib-ns w-62-ns tl'>
+        <input className='input input-lg db w-100 submit-error-b--red' type='email' name='email' placeholder='Enter your email address' required />
+        <Feedback relative={relative} />
       </div>
-      <input type="hidden" name="g-recaptcha-response" defaultValue="skip" />
-      <button className="btn btn-green bubble-left btn-lg w-100 w-auto-ns db dib-ns mt3 mt0-ns ml2-ns v-top pointer" type="submit" name="button">Learn More</button>
+      <input type='hidden' name='g-recaptcha-response' defaultValue='skip' />
+      <button className='btn btn-green bubble-left btn-lg w-100 w-auto-ns db dib-ns mt3 mt0-ns ml2-ns v-top pointer' type='submit' name='button'>Learn More</button>
     </form>
   )
 }
 
 export const SmallEmailForm = ({relative, large}) => {
   return (
-    <form data-id='email-form' style={{width: '100%', maxWidth: 362}} action="https://post.tableflip.io/medialist.io" method='post'>
-      <input type="hidden" name="g-recaptcha-response" defaultValue="skip" />
+    <form data-id='email-form' style={{width: '100%', maxWidth: 362}} action='https://post.tableflip.io/medialist.io' method='post'>
+      <input type='hidden' name='g-recaptcha-response' defaultValue='skip' />
       <div className='dt w-100 dt--fixed'>
         <div className='dtc-ns v-mid'>
-          <input className="db input submit-error-b--red" style={{minWidth: 232}} type="email" name="email" placeholder="Enter your email address" required />
+          <input className='db input submit-error-b--red' style={{minWidth: 232}} type='email' name='email' placeholder='Enter your email address' required />
           <Feedback relative={relative} />
         </div>
-        <div className='dtc-ns pl2-ns' style={{width:130}}>
-          <button className="btn btn-blue bubble-left w-100 w-auto-ns db dib-ns mt3 mt0-ns v-top pointer" type="submit" name="button">Learn More</button>
+        <div className='dtc-ns pl2-ns' style={{width: 130}}>
+          <button className='btn btn-blue bubble-left w-100 w-auto-ns db dib-ns mt3 mt0-ns v-top pointer' type='submit' name='button'>Learn More</button>
         </div>
       </div>
     </form>
